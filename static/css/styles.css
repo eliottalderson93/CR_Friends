@@ -1,0 +1,44 @@
+/*This is a default CSS document*/
+*{
+    padding:0px;
+    margin:0px;
+}
+/*This is the start of the webpage*/
+.wrapper{
+    min-height:1000px;
+    min-width:1000px;
+    background-color:silver;
+}
+    /*Define the classes below*/
+    .friend{
+        height:175px;
+        width:inherit;
+        border-bottom:gray solid 3px;
+    }
+    .info{
+        display:inline-block;
+        width:220px;
+        height:175px;
+    }
+        .info p{
+            width:200px;
+            height:50px;
+            margin-top:5px;
+            margin-bottom:5px;
+            text-align:center;
+        }
+        form p{
+            display:inline-block;
+            color:purple;
+        }
+        .enter{
+            display:inline-block;
+            border-radius:3px;
+            border: gray solid 2px;
+        }
+        .add{
+            border-radius:3px;
+            background-color:green;
+            padding-left:10px;
+            padding-right:10px;
+        }

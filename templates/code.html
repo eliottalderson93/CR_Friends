@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>C+R Friends</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/my_script.js') }}">
+        $(document).ready(function () {
+            $("").___();
+        });
+    </script>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <h1>These are all my friends</h1>
+        {% for friend in friends %}
+        <div class='friend'>
+            <div class="info">
+                <p>First Name:</p>
+                <p>Last Name:</p>
+                <p>Occupation:</p>
+            </div>
+            <div class="info">
+                <p>{{friend.first_name}}</p>
+                <p>{{friend.last_name}}</p>
+                <p>{{friend.occupation}}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <h1>Add a friend</h1>
+        <form action='/create_friend' method='POST'>
+            <p>First Name:</p>
+            <input class='enter' type="text" name="first_name">
+            <p>Last Name:</p>
+            <input class='enter' type="text" name="last_name">
+            <p>Occupation:</p>
+            <input class='enter' type="text" name="occupation">
+            <input class='add' type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
